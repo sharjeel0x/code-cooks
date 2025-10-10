@@ -1,0 +1,192 @@
+
+  :root {
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+
+  
+  --color-primary: #00FF66;     
+  --color-secondary: #0D0D0D;  
+  --color-accent: #161616;      
+  --color-dark: #000000;       
+  --color-light: #D0FFD6;       
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: 'Courier New', monospace;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-bottom: 1px solid #00ff66;
+  text-transform: uppercase;
+}
+
+.logo {
+  height: 35px;
+  margin-right: 5px;
+}
+
+.input-field {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.input-field input {
+  height: 30px;
+  width: 30vw;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  color: var(--color-light);
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  transition: 0.2s ease;
+}
+
+.input-field input::placeholder {
+  color: #008833;
+  font-size: 15px;
+}
+
+.input-field input:focus {
+  outline: none;
+  background-color: #0f0f0f;
+  border-color: #00ff66;
+}
+
+.input-field button {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  height: 44px;
+  width: 120px;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+}
+
+.input-field button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.ingredients-con {
+  height: 630px;
+  width: 400px;
+  background-color: var(--color-secondary);
+  margin: 50px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-light);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.lists {
+  font-size: 18px;
+  color: var(--color-light);
+  margin-top: -10px;
+}
+
+.ingri {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.lists li {
+  font-size: 16px;
+  margin-left: 30px;
+  list-style-type: "> ";
+  color: var(--color-light);
+}
+
+.lists li::marker {
+  color: var(--color-primary);
+}
+
+.get-recipe-con h4,
+.get-recipe-con p,
+.get-recipe-con button {
+  margin-left: 20px;
+}
+
+.get-recipe-con p {
+  margin-top: -20px;
+  color: #00cc55;
+  font-family: 'Courier New', monospace;
+}
+
+.get-recipe-con button {
+  margin-left: 230px;
+  margin-top: -30px;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  height: 44px;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+}
+
+.get-recipe-con button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.recipe {
+  display: flex;
+}
+
+.recipe-con {
+  height: 650px;
+  width: 70%;
+  background-color: var(--color-accent);
+  margin-top: 50px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-light);
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: 'Courier New', monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blinking cursor effect on body text */
+.recipe-con::after {
+  content: "_";
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: var(--color-primary);
+  animation: blink 1s infinite steps(2, start);
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
