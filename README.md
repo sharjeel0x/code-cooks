@@ -16,8 +16,8 @@ CodeCooks is a React web app that generates custom recipes based on the ingredie
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/sharjeel0x/codecooks.git
-cd codecooks
+git clone https://github.com/sharjeel0x/code-cooks
+cd code-cooks
 ```
 
 2. Install dependencies:
